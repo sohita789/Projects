@@ -9,13 +9,17 @@
   <style>
     body {
       background-color: #f0f8ff;
+       background-image: url(https://th.bing.com/th/id/OIP.H291gRF3x7yOuWmChkS_EAHaEo?rs=1&pid=ImgDetMain);
+            background-size: cover;
+            background-repeat: repeat;
+            background-position: center;
     }
     header {
       background-color: lightblue;
       color: black;
     }
     .logo-img {
-      border-radius: 13px;
+      border-radius: 15px;
     }
     h1 {
       font-size: 2rem;
@@ -35,7 +39,7 @@
   </div>
 
   <div class="text-center flex-grow-1">
-    <h1>Welcome to Xworkz</h1>
+    <h1>Welcome to Xworkz Institute</h1>
   </div>
 
   <ul class="nav nav-pills me-3">

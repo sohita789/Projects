@@ -8,13 +8,9 @@ import lombok.Data;
 
 public class SignInDTO {
 	
-	private int id;
-	private String name;
+	
 	private String email;
-	private long phoneNo;
-	private String alterEmail;
-	private long alterPhoneNo;
-	private String location;
+	private String password;
 	
 	public SignInDTO() {
 		

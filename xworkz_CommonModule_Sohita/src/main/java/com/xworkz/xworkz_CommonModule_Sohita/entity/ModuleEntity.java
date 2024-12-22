@@ -26,7 +26,7 @@ public class ModuleEntity {
 	private long alterPhoneNo;
 	private String location;
 	private String password;
-	
+	private int Resetstatus;
 	public ModuleEntity() {
 
 }

@@ -7,6 +7,16 @@
     <title>Login</title>
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+     body {
+            background-image: url(https://th.bing.com/th/id/OIP.H291gRF3x7yOuWmChkS_EAHaEo?rs=1&pid=ImgDetMain);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+       </style> 
 </head>
 <body>
 
@@ -19,9 +29,10 @@
                 </div>
                 <div class="card-body">
                     <form action="signin" method="post">
+                    
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
+                            <label for="email">Name</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
@@ -30,6 +41,9 @@
                         <button type="submit" class="btn btn-primary btn-block">Login</button>
                     </form>
                     ${msg}
+                     <div class="reset-link">
+      <a href="ResetPassword.jsp" class="btn btn-link">Reset your Password</a>
+    </div>
                 </div>
             </div>
         </div>
@@ -42,4 +56,4 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
-</html>
+</html>sss

@@ -8,6 +8,15 @@
     <title>SignUp </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+     body {
+            background-image: url(https://th.bing.com/th/id/OIP.H291gRF3x7yOuWmChkS_EAHaEo?rs=1&pid=ImgDetMain);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+    
         .form-container {
             border: 1px solid #ddd; 
             border-radius: 10px; 
@@ -28,6 +37,7 @@
 <div class="form-container">
     <h3 class="text-center mb-4">SignUp Form</h3>
     <form action="SignupServlet" method="post" onsubmit="return validateForm()">
+    
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" oninput="validateName()">
@@ -63,35 +73,59 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </form>
+    </div>
+     <div class="sign-link">
+      <a href="Signin.jsp" class="btn btn-link">login with ur details</a>
+    </div>
+    
     <h3>${name}</h3>
 </div>
 
+
 <script>
-    function validateName() {
-        const nameField = document.getElementById('userName');
-        const nameError = document.getElementById('nameError');
+function onNameChange() {
+    var name = document.getElementById('name').value;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:8080/xworkz_login/name/" + name, true);
+    xhttp.send();
+}
 
-        if (nameField.value.length < 10) {
-            nameError.style.display = 'block';
-        } else {
-            nameError.style.display = 'none';
-        }
-    }
+function onEmailChange() {
+    var email = document.getElementById('email').value;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:8080/xworkz_login/email/" + email, true);
+    xhttp.send();
+}
 
-    function validateForm() {
-        let isValid = true;
+function onAltEmailChange() {
+    var altEmail = document.getElementById('alterEmail').value;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:8080/xworkz_login/alterEmail/" + alterEmail, true);
+    xhttp.send();
+}
 
-        const nameField = document.getElementById('userName');
-        const nameError = document.getElementById('nameError');
-        if (nameField.value.length < 10) {
-            nameError.style.display = 'block';
-            isValid = false;
-        } else {
-            nameError.style.display = 'none';
-        }
+function onPhoneChange() {
+    var phone = document.getElementById('phoneNo').value;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:8080/xworkz_login/phoneNo/" + phoneNo, true);
+    xhttp.send();
+}
 
+function onAltPhoneChange() {
+    var altPhone = document.getElementById('alterPhoneNo').value;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:8080/xworkz_login/alterPhoneNo/" + alterPhoneNo, true);
+    xhttp.send();
+}
 
-        return isValid;
-    }
+function onLocationChange() {
+    var location = document.getElementById('location').value;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:8080/xworkz_login/location/" + location, true);
+    xhttp.send();
+}
 </script>
+
+
 </body>
+</html>
